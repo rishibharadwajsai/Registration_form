@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -14,28 +14,28 @@
         </div>
         <nav class="navbar">
           <ul class="list-items">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">SignUp</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    
+
     <main>
       <div class="container">
         <div class="background-image"></div>
 
         <div class="forms">
-          <form action="index.html" method="POST">
+          <form action="/" method="post">
             <h2>Signup Form</h2>
 
             <div class="form-group">
-              <label for="name">Name:</label>
+              <label for="First_name">Name:</label>
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="First_name"
                 placeholder="Your Name"
                 required
               />
@@ -74,7 +74,12 @@
                 required
               />
             </div>
-            <input type="submit" value="Submit" class="submit" />
+            <input
+              type="submit"
+              value="Submit"
+              class="submit"
+              name="submitBtn"
+            />
           </form>
         </div>
       </div>
