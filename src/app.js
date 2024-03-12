@@ -10,7 +10,7 @@ const static_path = path.join(__dirname, '../public');
 
 app.use(express.static(static_path));
 app.use(express.json());
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
     const html_path = path.join(static_path, 'index.html');
@@ -20,9 +20,18 @@ app.get("/", (req, res) => {
 app.post("/", async (req, res) => {
     try {
         if (req.body.submitBtn === 'Submit') {
-            console.log(req.body.email);
-
-            res.redirect(html_path);
+            const password = req.body.password;
+            if (password.length >= 8) {
+                const registerUser = new Register({
+                    First_name: req.body.First_name,
+                    email: req.body.email,
+                    mobile: req.body.mobile
+                })
+                res.send("Account created successfully.....");
+            }
+            else {
+                res.send("Password is less than 8 characters....");
+            }
         }
     } catch (error) {
         res.status(400).send(error);
