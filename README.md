@@ -1,4 +1,4 @@
-# Signup Form Application
+# Registration Form Application
 
 This repository contains a simple signup form application built using Node.js, Express.js, and MongoDB (Mongoose). The application allows users to sign up by providing their name, email, mobile number, and password. It includes client-side validation for password length and server-side validation using Mongoose schema.
 
