@@ -9,7 +9,7 @@
   "author": "rishi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2",
+    "express": "^4.22.1",
     "hbs": "^4.2.0",
     "mongoose": "^8.9.5"
   }
